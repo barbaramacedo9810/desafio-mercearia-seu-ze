@@ -1,105 +1,222 @@
-/* Configurações gerais */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f1e8;
-    color: #333;
-    line-height: 1.6;
+html {
+    scroll-behavior: smooth;
 }
 
-/* Cabeçalho */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #29251f;
+    background-color: #f8f5ee;
+}
+
+/* HEADER */
+
 header {
-    background-color: #5b3a29;
-    color: white;
-    text-align: center;
-    padding: 30px 20px;
+    background-color: #fff;
+    min-height: 75px;
+    padding: 18px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #e5dfd2;
 }
 
 header h1 {
-    font-size: 32px;
-    margin-bottom: 8px;
+    color: #68452d;
+    font-size: 25px;
 }
 
 header p {
-    font-size: 18px;
+    color: #777;
+    font-size: 14px;
 }
 
-/* Conteúdo principal */
+/* CONTEÚDO */
+
 main {
-    max-width: 900px;
-    margin: 30px auto;
-    padding: 0 20px;
+    max-width: 1100px;
+    margin: auto;
 }
+
+/* SEÇÕES */
 
 section {
-    background-color: white;
-    margin-bottom: 20px;
-    padding: 25px;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    padding: 55px 30px;
 }
+
+/* TÍTULOS */
 
 section h2 {
-    color: #5b3a29;
-    margin-bottom: 12px;
-    border-bottom: 2px solid #d6a756;
-    padding-bottom: 5px;
+    color: #68452d;
+    font-size: 28px;
+    margin-bottom: 20px;
 }
 
-/* Listas */
-ul {
-    padding-left: 20px;
+/* BEM-VINDO */
+
+section:first-child {
+    min-height: 430px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 8%;
+    background-color: #eee5d4;
 }
 
-li {
-    margin-bottom: 8px;
+section:first-child h2 {
+    font-size: 44px;
+    max-width: 600px;
+    margin-bottom: 15px;
 }
 
-/* Links */
-a {
-    color: #8b5e34;
-    text-decoration: none;
+section:first-child p {
+    max-width: 600px;
+    font-size: 18px;
+    color: #5f5a51;
+}
+
+/* PRODUTOS */
+
+section:nth-child(2) {
+    background-color: #fff;
+    text-align: center;
+}
+
+section:nth-child(2) ul {
+    max-width: 800px;
+    margin: 25px auto 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    list-style: none;
+}
+
+section:nth-child(2) li {
+    background-color: #f3eee4;
+    color: #68452d;
+    padding: 15px 25px;
+    border-radius: 5px;
     font-weight: bold;
+}
+
+/* HORÁRIO */
+
+section:nth-child(3) {
+    background-color: #68452d;
+    color: white;
+}
+
+section:nth-child(3) h2 {
+    color: #fff;
+}
+
+section:nth-child(3) ul {
+    list-style: none;
+}
+
+section:nth-child(3) li {
+    padding: 8px 0;
+    font-size: 17px;
+}
+
+/* LOCALIZAÇÃO */
+
+section:nth-child(4) {
+    background-color: #f8f5ee;
+}
+
+section:nth-child(4) p {
+    margin-bottom: 12px;
+}
+
+/* CONTATO */
+
+section:nth-child(5) {
+    background-color: #d8a84e;
+}
+
+section:nth-child(5) h2 {
+    color: #402b1c;
+}
+
+section:nth-child(5) p {
+    display: inline-block;
+    margin-right: 30px;
+    font-weight: bold;
+}
+
+/* LINKS */
+
+a {
+    color: #68452d;
+    font-weight: bold;
+    text-decoration: none;
 }
 
 a:hover {
     text-decoration: underline;
 }
 
-/* Rodapé */
+/* FOOTER */
+
 footer {
-    background-color: #3d281d;
-    color: white;
+    background-color: #292019;
+    color: #ddd;
     text-align: center;
-    padding: 20px;
-    margin-top: 30px;
+    padding: 25px;
 }
 
 footer a {
-    color: #f0c674;
+    color: #d8a84e;
 }
 
-/* Ajuste para celular */
+/* CELULAR */
+
 @media (max-width: 600px) {
 
-    header h1 {
-        font-size: 26px;
+    header {
+        display: block;
+        text-align: center;
     }
 
     header p {
-        font-size: 16px;
+        margin-top: 5px;
     }
 
     section {
-        padding: 20px;
+        padding: 40px 20px;
     }
 
-    main {
-        padding: 0 15px;
+    section:first-child {
+        min-height: 400px;
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    section:first-child h2 {
+        font-size: 34px;
+    }
+
+    section:first-child p {
+        font-size: 16px;
+    }
+
+    section:nth-child(2) ul {
+        display: block;
+    }
+
+    section:nth-child(2) li {
+        margin-bottom: 10px;
+    }
+
+    section:nth-child(5) p {
+        display: block;
+        margin-bottom: 12px;
     }
 }
